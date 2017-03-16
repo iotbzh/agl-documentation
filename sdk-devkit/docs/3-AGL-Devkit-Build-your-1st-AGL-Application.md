@@ -1,10 +1,5 @@
----
-title: Build your first AGL application
----
-![](pictures/iotbzh_logo.png)
-
 Build your first AGL application
-================================================
+================================
 
 ## Abstract
 
@@ -1170,7 +1165,7 @@ Open `app/Frontend/pages/SampleHome/SampleHome.html` and, at line 19,
 replace:
 ```
  <submit-button class="session-button {{ctrl.class.refresh}}" icon="fi-arrows-compress" label="Refresh" clicked="ctrl.RefreshSession" ></submit-button>
- ```
+```
 
 with:
 ```

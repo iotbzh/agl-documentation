@@ -1,0 +1,8 @@
+site_name: AGL Application Framework Binder
+theme: readthedocs
+docs_dir: docs
+pages:
+  - 'Overview' : 'index.md'
+  - 'Install AGL DevKit' : '1-AGL-Devkit-Image-installation.md'
+  - 'Build from scratch: AGL image and SDK for Porter' : '2-AGL-Devkit-Image-build.md'
+  - 'Build your first AGL application' : '3-AGL-Devkit-Build-your-1st-AGL-Application.md'

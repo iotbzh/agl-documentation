@@ -1,9 +1,3 @@
----
-title : Build from scratch: AGL image and SDK for Porter
----
-
-![](pictures/iotbzh_logo.png)
-
 Build from scratch: AGL image and SDK for Porter
 ================================================
 
