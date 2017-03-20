@@ -1,5 +1,4 @@
-AGL Development Kit
-===================
+# Part 1 - Build AGL image from scratch
 
 ## Abstract
 
