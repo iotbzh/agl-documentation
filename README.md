@@ -24,5 +24,4 @@ gitbook pdf ./sdk-devkit ./build/sdk-devkit.pdf
 
 ## Notes / TODO
 - Add Iot.Bzh logo in header instead of IoT.Bzh text
-- Fix blank pages
 - Autogenerate cover https://plugins.gitbook.com/plugin/autocover

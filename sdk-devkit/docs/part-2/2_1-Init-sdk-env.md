@@ -81,10 +81,7 @@ the source repository:
 $ cd ~
 $ git clone https://github.com/iotbzh/app-framework-templates
 Cloning into 'app-framework-templates'...
-remote: Counting objects: 315, done.
-remote: Compressing objects: 100% (62/62), done.
-remote: Total 315 (delta 25), reused 0 (delta 0), pack-reused 250
-Receiving objects: 100% (315/315), 512.81 KiB | 284.00 KiB/s, done.
+[...snip...]
 Resolving deltas: 100% (125/125), done.
 Checking connectivity... done.
 ```
@@ -118,7 +115,7 @@ Here are some details on the files encountered in the projects:
 
 - **CMakeLists.txt**: our templates use CMake for automatic
   configuration and building. In your projects, you can of course
-  adapt templates to use your preferred solution (Autoconf, Scons...).
+  adapt templates to use your preferred solution \(Autoconf, Scons...\).
 - **gulpfile.js**: these are some kind of `Makefiles` used by the
   Gulp tool. g*ulp *is often used in HTML5 projects as it is able to
   execute all needed tasks to process web source files (JavaScript,
@@ -128,10 +125,10 @@ Here are some details on the files encountered in the projects:
   dependencies. Basically, `gulp` and `gulpfile.js` will download and
   install all packages mentioned here to assemble the HTML5 project
   during the "npm install" step.
-- **config.xml(.in)**: XML configuration file required by the
+- **config.xml\(.in\)**: XML configuration file required by the
   application framework. This file is mandatory for an AGL Application
   to be installed and launched by the framework.
-- **export.map**: for Bindings (a.k.a. shared libraries) only, this
+- **export.map**: for Bindings \(a.k.a. shared libraries\) only, this
   file must contain a list of exported API verbs. Only the symbols
   specified in this export file will be accessible at runtime. So
   *export.map* should contain all verbs you intend to provide in your
