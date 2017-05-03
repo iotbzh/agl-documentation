@@ -1,4 +1,4 @@
-# Part 1 - Build AGL image from scratch
+# Part 1 - Build AGL image from scratch
 
 ## Abstract
 
