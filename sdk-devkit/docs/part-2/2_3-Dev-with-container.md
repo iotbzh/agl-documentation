@@ -11,7 +11,7 @@ But this can be circumvented.
 For this reason, and before we start developing our own apps, we will
 explain how to get the best from the provided development container.
 
-### Remote display
+## Remote display
 <a id="anchor-remote-display"></a>
 
 Apart from popular console tools such as `vi, git, patch, diff...` our
@@ -22,21 +22,25 @@ You can display them on your host machine by taking advantage of X11
 protocol remoting capabilities. The procedure differs depending on your
 host machine.
 
-#### Linux
+### Linux
 
 You have to connect to your container by specifying the `-X` option:
-```
+
+```bash
 $ ssh -X -p 2222 devel@localhost
 ```
+
 and then any graphical window, such as `gvim`'s, should display on your
 host screen.
 
-#### Mac OS X
+### Mac OS X
 
 You have to connect to your container by specifying the `-X` option:
-```
+
+```bash
 $ ssh -X -p 2222 devel@localhost
 ```
+
 together with a running X11 server such as XQuartz.
 
 XQuartz was included in old versions such as 10.5 Leopard; you can find it
@@ -50,7 +54,7 @@ install it from the following URL:
 And then after having activated the "X11" icon, any graphical window, such as
 `gvim`'s, should display on your host screen.
 
-#### Windows
+### Windows
 
 You have to use PuTTY, as suggested in the previous "**Image and SDK
 for porter**" document, together with a running X server such as Xming
@@ -67,18 +71,20 @@ in the bottom right of the screen:
 ![](pictures/xming_server.png)
 any graphical window, such as `gvim`'s, should display on your screen.
 
-
-### Installing new applications (IDE...)
+## Installing new applications (IDE...)
 
 The container has access to the whole Linux Debian distribution library,
 and can benefit of only package available for it.
 
 For instance, to install the popular Eclipse IDE, please type:
-```
+
+```bash
 $ sudo apt-get install eclipse
 ```
+
 And then, using the method described in section ["Remote display"](anchor-remote-display),
 you can run it on your host screen by just typing:
-```
+
+```bash
 $ eclipse
 ```

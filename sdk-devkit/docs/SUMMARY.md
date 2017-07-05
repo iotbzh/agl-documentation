@@ -13,6 +13,6 @@
 
 * [Part 2 - Build your 1st application](part-2/2_0_Abstract.md)
   * [Initializing SDK environment and templates](part-2/2_1-Init-sdk-env.md)
-  * [Trying out the templates](part-2/2_2-Trying-out-templates.md)
+  * [Trying out the template](part-2/2_2-Trying-out-template.md)
   * [Developing smoothly with the container](part-2/2_3-Dev-with-container.md)
-  * [Creating your own hybrid application](part-2/2_4-Creating-hybrid-app.md)
+  * [Creating your own hybrid application](part-2/2_4-Use-app-templates.md)
