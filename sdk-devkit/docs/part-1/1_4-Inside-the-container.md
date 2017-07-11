@@ -1,17 +1,19 @@
 # Inside the container
 
-### Features
+## Features
 
 Container features:
+
 - a Debian 8.5 based system with an SSH server listening on tcp/22,
 - a dedicated user is defined to run the SSH session: **devel**
   (password: **devel**)
 - a script named "prepare_meta" for preparing the build environment
 
-### File system organization and shared volume
+## File system organization and shared volume
 
 The image has been designed with a dedicated file-system hierarchy. Here it is:
-```
+
+```bash
 devel@bsp-devkit:/$ **tree -L 2 /xdt**
 /xdt
 |-- build
@@ -51,11 +53,13 @@ devel@bsp-devkit:/$ **tree -L 2 /xdt**
  [snip]
 `-- workspace
 ```
+
 Noticeably, the BSP related features are located in the dedicated "/xdt"
 directory.
 
 This directory contains sub-directories, and in particular the
 following:
+
 - **build**: will contain the result of the build process, including
   an image for the Porter board.
 - **downloads**: (optional) contain the Yocto download cache, a

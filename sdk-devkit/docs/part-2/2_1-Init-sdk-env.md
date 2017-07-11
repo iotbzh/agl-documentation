@@ -1,6 +1,6 @@
 # Initializing SDK environment and templates
 
-### Initializing the SDK environment
+## Initializing the SDK environment
 
 *(This document assumes that you are logged inside the **bsp-devkit** Docker
 container, used to produce Rcar Gen3 BSP image and AGL SDK in the
@@ -25,7 +25,7 @@ this command:
 echo $CONFIG_SITE | grep sdk /xdt/sdk/site-config-aarch64-agl-linux
 ```
 
-### Application categories
+## Application categories
 
 We provide multiple development templates for the AGL SDK:
 
@@ -59,7 +59,7 @@ We provide multiple development templates for the AGL SDK:
   Application Framework but launched by it. For such application, only
   security setup is made.
 
-### Getting helloworld templates
+## Getting helloworld templates
 
 Application Framework _helloworld_ example live in a dedicated Git
 Repository, currently hosted on GitHub at the following address:

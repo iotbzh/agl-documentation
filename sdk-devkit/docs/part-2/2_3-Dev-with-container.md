@@ -12,6 +12,7 @@ For this reason, and before we start developing our own apps, we will
 explain how to get the best from the provided development container.
 
 ## Remote display
+
 <a id="anchor-remote-display"></a>
 
 Apart from popular console tools such as `vi, git, patch, diff...` our
@@ -27,7 +28,7 @@ host machine.
 You have to connect to your container by specifying the `-X` option:
 
 ```bash
-$ ssh -X -p 2222 devel@localhost
+ssh -X -p 2222 devel@localhost
 ```
 
 and then any graphical window, such as `gvim`'s, should display on your
@@ -38,7 +39,7 @@ host screen.
 You have to connect to your container by specifying the `-X` option:
 
 ```bash
-$ ssh -X -p 2222 devel@localhost
+ssh -X -p 2222 devel@localhost
 ```
 
 together with a running X11 server such as XQuartz.
@@ -79,12 +80,12 @@ and can benefit of only package available for it.
 For instance, to install the popular Eclipse IDE, please type:
 
 ```bash
-$ sudo apt-get install eclipse
+sudo apt-get install eclipse
 ```
 
 And then, using the method described in section ["Remote display"](anchor-remote-display),
 you can run it on your host screen by just typing:
 
 ```bash
-$ eclipse
+eclipse
 ```

@@ -81,9 +81,9 @@ Choose between:
 
 ```cmake
 SET_TARGET_PROPERTIES(${TARGET_NAME}
-	PREFIX "afb-"
-	LABELS "BINDING"
-	OUTPUT_NAME "file_output_name")
+    PREFIX "afb-"
+    LABELS "BINDING"
+    OUTPUT_NAME "file_output_name")
 ```
 
 > **TIP** you should use the prefix _afb-_ with your **BINDING* targets which
@@ -224,9 +224,9 @@ Example:
 
 ```cmake
 SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES
-		LABELS "HTDOCS"
-		OUTPUT_NAME dist.prod
-	)
+        LABELS "HTDOCS"
+        OUTPUT_NAME dist.prod
+    )
 ```
 
 If your target output is not named as the ***TARGET_NAME***, you need to specify

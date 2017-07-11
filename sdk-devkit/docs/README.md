@@ -4,17 +4,12 @@ AGL Development Kit allows developers and integrators to rebuild complete bootab
 from source code, as well as developing new applications for AGL.
 
 It leverages Docker capabilities to propose a unified environment suitable for most development tasks:
+
 * compatible with AGL 3.x (based on Yocto/Poky 2.x)
 * support all AGL boards inc. reference boards (Renesas, Intel)
 * low-level development of drivers
 * system services development and integration
 * applications development (build, deploy, debug) using AGL SDK and AGL Application Framework
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
 | *Meta* | *Data* |
 | -- | -- |

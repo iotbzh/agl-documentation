@@ -3,7 +3,7 @@
 In this section, we will go on the image compilation for the Porter
 board within the Docker container.
 
-### Download Renesas proprietary drivers
+## Download Renesas proprietary drivers
 
 For the Porter board, we first need to download the proprietary drivers
 from Renesas web site. The evaluation version of these drivers can be
@@ -26,7 +26,8 @@ directory visible from the container, for example in the directory
 previously in section [Start the container](#anchor-start-container) and adjust
 the permissions. The zip files should then be visible from the inside of the
 container in `/home/devel/mirror`:
-```
+
+```bash
 $ chmod +r /home/devel/mirror/proprietary-renesas-r-car/*.zip
 $ ls -l /home/devel/mirror/proprietary-renesas-r-car/
 total 8220
@@ -34,19 +35,21 @@ total 8220
 -rw-r--r-- 1 1000 1000 2394750 Jul 11 11:03 R-Car_Series_Evaluation_Software_Package_of_Linux_Drivers-20151228.zip
 ```
 
-### Setup the build environment
+## Setup the build environment
 
 We should first prepare the environment to build images.
 
 This can be easily done thanks to a helper script named `prepare_meta`.
 This script does the following:
+
 - check for an updated version at
   [https://github.com/iotbzh/agl-manifest](https://github.com/iotbzh/agl-manifest)
 - pull Yocto layers from git repositories, following a snapshot manifest
 - setup build configuration (build/conf files)
 
 The following options are available:
-```
+
+```bash
 devel@bsp-devkit:~$ prepare_meta -h
 prepare_meta [options]
 
@@ -85,6 +88,7 @@ Example:
 ```
 
 In our case, we can start it with the following arguments:
+
 - build in `/xdt` (-o /xdt)
 - build for porter board (`-t porter`)
 - build the 'iotbzh' flavour (`-f iotbzh`), which contains the standard
@@ -97,7 +101,8 @@ In our case, we can start it with the following arguments:
 - specify proprietary drivers location (`-p <drivers path>`)
 
 So we can run the helper script:
-```
+
+```bash
 devel@bsp-devkit:~$ prepare_meta -o /xdt -t porter -f rel2.0 -l /home/devel/mirror/ -p /home/devel/mirror/proprietary-renesas-r-car/ -e wipeconfig
 [...]
 === setup build for porter
@@ -127,10 +132,11 @@ then
 
 Now, the container shell is ready to build an image for Porter.
 
-### Launch the build
+## Launch the build
 
 To start the build, we can simply enter the indicated commands:
-```
+
+```bash
 devel@bsp-devkit:~$ . /xdt/build/agl-init-build-env
 ### Shell environment set up for builds. ###
 
@@ -152,7 +158,7 @@ Without mirror, it will take a few hours to build all the required
 component of the AGL distribution, depending on: your host machine CPU,
 disk drives types and internet connection.
 
-### Updating the local mirror
+## Updating the local mirror
 
 Optionally, at the end of the build, some directories may be synced to
 the mirror dir, for future usage:
@@ -162,7 +168,8 @@ the mirror dir, for future usage:
 - `/xdt/sstate-cache`: binary build results (avoid recompiling sources)
 
 This can be done with the following command:
-```
+
+```bash
 $ for x in meta downloads sstate-cache; do rsync -Pav \
    --delete /xdt/$x /home/devel/mirror/$x; done
 ```

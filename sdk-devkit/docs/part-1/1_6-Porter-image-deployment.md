@@ -3,32 +3,35 @@
 Once the Porter image has been built with Yocto, we can deploy it on an
 empty SD card to prepare its use on the target.
 
-### SD card image creation
+## SD card image creation
 
 First, we need to generate an SD card disk image file. For this purpose,
 a helper script is provided within the container. Here below is the way
 to use it.
 
-#### Linux, Mac OS X ©
-```
-$ cd /xdt/build
-$ mksdcard /xdt/build/tmp/deploy/images/porter/agl-demo-platform-porter-20XXYYZZxxyyzz.rootfs.tar.bz2 /home/devel/mirror
+### Linux, Mac OS X ©
+
+```bash
+cd /xdt/build
+mksdcard /xdt/build/tmp/deploy/images/porter/agl-demo-platform-porter-20XXYYZZxxyyzz.rootfs.tar.bz2 /home/devel/mirror
 ```
 
-#### Windows ©
-```
-$ cd /xdt/build
-$ sudo dd if=/dev/zero of=/sprs.img bs=1 count=1 seek=4G
-$ sudo mkfs.ext4 /sprs.img
-$ sudo mkdir /tmp/sprs
-$ sudo mount /sprs.img /tmp/sprs
-$ sudo mksdcard /xdt/build/tmp/deploy/images/porter/agl-demo-platform-porter-20XXYYZZxxyyzz.rootfs.tar.bz2
+### Windows ©
+
+```bash
+cd /xdt/build
+sudo dd if=/dev/zero of=/sprs.img bs=1 count=1 seek=4G
+sudo mkfs.ext4 /sprs.img
+sudo mkdir /tmp/sprs
+sudo mount /sprs.img /tmp/sprs
+sudo mksdcard /xdt/build/tmp/deploy/images/porter/agl-demo-platform-porter-20XXYYZZxxyyzz.rootfs.tar.bz2
 /tmp/sprs/sdcard.img
-$ xz -dc /tmp/sprs/sdcard.img.xz > $XDT_WORKSPACE/agl-demo-platform-porter-sdcard.img
+xz -dc /tmp/sprs/sdcard.img.xz > $XDT_WORKSPACE/agl-demo-platform-porter-sdcard.img
 ```
 
 You should get the following prompt during the `mksdcard` step:
-```
+
+```bash
 Creating the image agl-demo-platform-porter-sdcard.img ...
 0+0 records in
 0+0 records out
@@ -66,6 +69,7 @@ $ ls -lh $XDT_WORKSPACE
 -rw-r--r-- 1 devel devel 2.0G Feb 15 14:13 agl-demo-platform-porter-sdcard.img
 
 ```
+
 After the disk image is created, we can copy it on the SD card itself
 using an SD card adapter. To do so, we need to gain access to the SD
 card image file from our host machine.
@@ -84,8 +88,7 @@ and into your host machine using SSH protocol:
  [`pscp.exe`](http://the.earth.li/~sgtatham/putty/latest/x86/pscp.exe)
  binary, which is part of the [PuTTY project](http://www.putty.org/).
 
-
-### Deployment from a Linux or Mac OS X host
+## Deployment from a Linux or Mac OS X host
 
 Now that the SD card image is ready, the last step required is to
 "flash" it onto the SD card itself.
@@ -95,17 +98,18 @@ Depending on your adapter type and OS, the relevant block device can
 change. Mostly, you can expect:
 
 - `/dev/sdX` block device; usually for external USB adapters on
-    Linux hosts,
--   `/dev/mmcblkN`: when using a laptop internal adapter on Linux
-    hosts,
--   `/dev/diskN`: on Mac OS X hosts,
+ Linux hosts.
+- `/dev/mmcblkN`: when using a laptop internal adapter on Linux
+ hosts.
+- `/dev/diskN`: on Mac OS X hosts.
 
-#### Linux
+### Linux
 
 If you do not know which block device you should use, you can check the
 kernel logs using the following command to figure out what is the
 associated block devices:
-```
+
+```bash
 $ dmesg | grep mmcblk
 $ dmesg | grep sd
 [...snip...]
@@ -125,7 +129,8 @@ listed and can be accessed on **`/dev/sdb`** which in our case is the
 physical SD card capacity.
 
 The command `lsblk` is also a good solution to explore block devices:
-```
+
+```bash
 $ lsblk
 NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 sda 8:0 0 931.5G 0 disk
@@ -143,6 +148,7 @@ sdc 8:32 1 3.7G 0 disk                  <-- SD card plugged into USB card reader
 |--sdc1 8:33 1 2G 0 part                <--
 sr0 11:0 1 1024M 0 rom
 ```
+
 In this example, the 4GB device `/dev/sdc` is listed as removable
 (column RM) and corresponds to a SD Card plugged into an USB card
 reader.
@@ -150,7 +156,8 @@ reader.
 Finally, as we know the block device which corresponds to our SD card,
 we can raw-copy the image on it using the following command __**from your
 host terminal**__ : (replace `/dev/sdZ` by the appropriate device)
-```
+
+```bash
 $ xzcat ~/mirror/agl-demo-platform-porter-20XXYYZZxxyyzz.raw.xz | sudo dd of=/dev/sdZ bs=1M
 2048+0 records in
 2048+0 records out
@@ -171,11 +178,12 @@ this significantly speeds up the copy as only relevant data are written on
 the Sdcard (filesystem "holes" are not written). It's also supporting
 direct access to URLs pointing to compressed images.
 
-#### Mac OS X ©
+### Mac OS X ©
 
 If you do not know which block device you should use, you can use the
 `diskutil` tool to list them:
-```
+
+```bash
 $ diskutil list
 [...snip...]
 
@@ -193,7 +201,8 @@ In this example, we have a 8.0GB disk which can be accessed on
 Finally, as we know the block device which accesses our SD card, we can
 raw-copy the image on it using the following command __from your host
 terminal__:
-```
+
+```bash
 $ xzcat ~/mirror/agl-demo-platform-porter-20XXYYZZxxyyzz.raw.xz | sudo dd of=/dev/disk2 bs=1M
 2048+0 records in
 2048+0 records out
@@ -208,7 +217,7 @@ Once it is finished, you can unplug the card and insert it in the
 micro-SD card slot on the Porter board, and perform a power cycle to
 start your new image on the target.
 
-### Deployment from a Windows host
+## Deployment from a Windows host
 
 Now that the SD card image is ready, the last step required is to "flash" it
 onto the SD card itself.

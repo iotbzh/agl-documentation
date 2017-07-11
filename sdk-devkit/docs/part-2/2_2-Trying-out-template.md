@@ -11,7 +11,8 @@ For deployment, we assume that the target board is booted with an AGL
 image and available on the network. Let us use the `BOARDIP` variable
 for the board IP address (replace by appropriate address or hostname)
 and test the SSH connection:
-```
+
+```bash
 $ export BOARDIP=1.2.3.4
 $ ssh root@$BOARDIP cat /etc/os-release
 ID="poky-agl"
@@ -53,7 +54,7 @@ helloworld-service.wgt                           100%   24KB   24.3KB/s   00:00
 And then, in a separate window, log in to the target board:
 
 ```bash
-$ ssh root@$BOARDIP
+ssh root@$BOARDIP
 ```
 
 and install our packages:

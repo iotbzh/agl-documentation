@@ -8,6 +8,7 @@ with latest version of Renesas BSP and enables low-level development of
 drivers and system services.
 
 The AGL DevKit contains:
+
 - This guide, which describes how to create a Docker container able to
   build AGL images and associated SDKs. The container is also suitable
   to build AGL Applications independently of Yocto/Bitbake.
@@ -17,7 +18,6 @@ The AGL DevKit contains:
   - native applications
   - HTML5 applications
   - ...
-
 - A documentation guide "**AGL Devkit - Build your 1st AGL
   Application**" which explains how to use the AGL SDK to create applications
   based on templates.
