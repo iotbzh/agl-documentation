@@ -1,6 +1,6 @@
 # Part 2 - Build your 1st application
 
-## Abstract
+## Abstract
 
 In the first part of this document, entitled "** Build AGL image from scratch**",
 we rebuilt a complete bootable AGL image from source code. We also generated
