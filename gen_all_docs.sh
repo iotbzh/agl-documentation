@@ -20,5 +20,6 @@ EBCONV=`which ebook-convert`
 
 cat <<EOF | { while read doc_dir output_file; do $DRY $GITBOOK install $doc_dir; $DRY $GITBOOK $FORMAT $doc_dir $OUT_DIR/$output_file $DEBUG_FLAG; done }
 ./sdk-devkit AGL-Development-Kit.pdf
+./host-configuration AGL-Host-Configuration.pdf
 EOF
 
