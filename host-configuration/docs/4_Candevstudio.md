@@ -17,3 +17,8 @@ sudo zypper install CANdevStudio
 ```bash
 sudo dnf install CANdevStudio
 ```
+
+## CANdevStudio Quickstart
+
+The CANdevStudio Quickstart can be found
+[here](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/candevstudio/docs/1_Usage.html).
