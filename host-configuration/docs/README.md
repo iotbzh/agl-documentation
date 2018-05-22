@@ -1,15 +1,17 @@
 # Introduction
 
-AGL Development Kit allows developers and integrators to rebuild complete bootable images
-from source code, as well as developing new applications for AGL.
+AGL Automotive Grade Linux Automotive Grade Linux is a collaborative open
+source project that is bringing together automakers, suppliers and technology
+companies to accelerate the development and adoption of a fully open software
+stack for the connected car.
 
-It leverages Docker capabilities to propose a unified environment suitable for most development tasks:
+![Automotive grade linux screenshot](pictures/Automotive_grade_linux.png)
 
-* compatible with AGL 3.x (based on Yocto/Poky 2.x)
-* support all AGL boards inc. reference boards (Renesas, Intel)
-* low-level development of drivers
-* system services development and integration
-* applications development (build, deploy, debug) using AGL SDK and AGL Application Framework
+The purpose of this section is to help to natively install AGL microservices
+thanks to OBS packages and so for debian/ubuntu, openSUSE and fedora distributions.
+
+At first hand, the idea is to easily handle native
+development and at second hand to run the result on targets.
 
 | *Meta* | *Data* |
 | -- | -- |

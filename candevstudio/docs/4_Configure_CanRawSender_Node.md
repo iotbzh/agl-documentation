@@ -2,6 +2,8 @@
 
 CanRawSender node lets you set a predefined list of CAN Raw messages to send.
 
+![CanRawSender screenshot](pictures/canrawsender.png)
+
 Click on the + sign to add as much as needed signals to send. For each signals, you has to define:
 
 - the CAN arbitration ID
