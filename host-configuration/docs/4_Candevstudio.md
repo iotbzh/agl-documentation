@@ -1,5 +1,10 @@
 # CANdevStudio
 
+CANdevStudio is a CAN bus simulation software. It can work with variety of CAN
+hardware interfaces (e.g. Microchip, Vector, PEAK-Systems) or even without it
+(vcan and cannelloni) . CANdevStudio enables to simulate CAN signals such as
+ignition status, doors status or reverse gear by every automotive developer.
+
 ## CANdevStudio for debian
 
 ```bash

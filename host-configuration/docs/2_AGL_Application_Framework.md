@@ -1,5 +1,11 @@
 # AGL Application Framework
 
+The binder provides the way to connect applications to the services that it
+needs.
+
+It provides a fast way to securely offer APIs to applications written in any
+language and running almost anywhere.
+
 ## AGL application framework for debian
 
 ```bash
