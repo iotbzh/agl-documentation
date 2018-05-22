@@ -1,5 +1,6 @@
 {
     "title": "AGL Host Configuration",
+    "subtitle": "Developer Documentation",
     "description": "Install AGL tools from OBS repo",
     "keywords": "AGL, OBS, Install, repo, host",
     "author": "IoT.Bzh Team",
@@ -12,7 +13,8 @@
     "pdf": {
         "fontFamily": "Verdana",
         "fontSize": 12,
-        "paperSize": "a4"
+        "paperSize": "a4",
+        "pageBreaksBefore": "//h:div[@class=\"page-break\"]"
     },
     "styles": {
         "website": "resources/ebook.css",
@@ -60,6 +62,16 @@
                     "substitute": "</div>"
                 },
                 {
+                    "pattern": "<!-- warning -->",
+                    "flags": "g",
+                    "substitute": "<div class=\"warning\">"
+                },
+                {
+                    "pattern": "<!-- endwarning -->",
+                    "flags": "g",
+                    "substitute": "</div>"
+                },
+                {
                     "pattern": "!\\[(.*?)\\]\\((.*?)(?:\\s+\"(.*)\")?\\){0,}{caption=1([^\\}]*)}",
                     "flags": "gmi",
                     "substitute": "<figure id=\"fig_PAGE_LEVEL_._INDEX_\"><img $3 alt=\"$1\" title=\"$1\" href=\"$2\"><figcaption></figcaption></figure>",
@@ -81,9 +93,9 @@
                     }
                 },
                 {
-                    "pattern": "<img ([^>]*)> {0,}{style {1,}([^}]*)}",
+                    "pattern": "<img ([^>]*)> {0,}{:: {0,}style=([^}]*)}",
                     "flags": "g",
-                    "substitute": "<img $1 style=\"$2\">",
+                    "substitute": "<img $1 style=$2>",
                     "decode": true
                 }
             ]
