@@ -1,19 +1,21 @@
 # Prerequisites for package installation
 
-There are 3 different repos for agl packages depending on the version, it is
+There are 3 different repos for AGL packages depending on the version, it is
 possible to install the three of them and switching between them.
 
 The three versions are:
 
 * ElectricEel: the released version
 * Master: the last stable version
-* MasterNext: the developper version
+* MasterNext: the developer version
 
 ```bash
 export REVISION=ElectricEel
 export REVISION=Master
 export REVISION=MasterNext
 ```
+
+For more details about OBS, please visit [LinuxAutomotive page on OBS](https://build.opensuse.org/project/show/isv:LinuxAutomotive)
 
 ## Add repo for debian distro
 
