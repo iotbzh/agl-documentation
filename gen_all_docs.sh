@@ -18,7 +18,9 @@ GITBOOK=`which gitbook`
 EBCONV=`which ebook-convert`
 [ "$?" = "1" ] && { echo "You must install calibre first, please refer to https://calibre-ebook.com/download"; exit 1; }
 
-cat <<EOF | { while read doc_dir output_file; do $DRY $GITBOOK $FORMAT $doc_dir $OUT_DIR/$output_file $DEBUG_FLAG; done }
+cat <<EOF | { while read doc_dir output_file; do $DRY $GITBOOK install $doc_dir; $DRY $GITBOOK $FORMAT $doc_dir $OUT_DIR/$output_file $DEBUG_FLAG; done }
 ./sdk-devkit AGL-Development-Kit.pdf
+./host-configuration AGL-Host-Configuration.pdf
+./candevstudio AGL-CanDevStudio.pdf
 EOF
 
