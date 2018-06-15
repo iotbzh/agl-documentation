@@ -6,5 +6,6 @@ pages:
 - '0. Abstract': '0_Abstract.md'
 - '1. Prequisites': '1_Prerequisites.md'
 - '2. AGL Application Framework Installation': '2_AGL_Application_Framework.md'
-- '3. AGL XDS Installation.md': '3_AGL_XDS.md'
-- '4. CanDevStudio Installation': '4_Candevstudio.md'
+- '3. Binding Build Example': '3_Binding_Build_Example.md'
+- '4. AGL XDS Installation.md': '4_AGL_XDS.md'
+- '5. CanDevStudio Installation': '5_Candevstudio.md'

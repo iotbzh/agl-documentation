@@ -5,5 +5,6 @@
 * [Abstract](0_Abstract.md)
 * [Prerequisites](1_Prerequisites.md)
 * [AGL Application Framework Installation](2_AGL_Application_Framework.md)
-* [AGL XDS Installation.md](3_AGL_XDS.md)
-* [CanDevStudio Installation](4_Candevstudio.md)
+* [Binding Build Example](3_Binding_Build_Example.md)
+* [AGL XDS Installation.md](4_AGL_XDS.md)
+* [CanDevStudio Installation](5_Candevstudio.md)
