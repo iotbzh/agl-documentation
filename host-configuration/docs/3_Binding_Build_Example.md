@@ -1,7 +1,7 @@
 # Binding Build Example
 Now that you have installed the AGL Application Framework, you will be guided through the installation of the helloworld-service binding.
 
-Install git, cmake, gcc, g++, json-c.
+##Install git, cmake, gcc, g++, json-c.
 ### Debian
 ```bash
 sudo apt-get install git cmake gcc g++ libjson-c-dev
