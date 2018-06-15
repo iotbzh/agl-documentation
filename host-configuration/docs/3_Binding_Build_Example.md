@@ -33,6 +33,7 @@ or manually
 mkdir build
 cd build
 cmake ..
+make
 ```
 
 ## Troubleshooting
