@@ -1,5 +1,5 @@
 # Binding Build Example
-Now that you have installed the AGL Application Framework, you will be guided through the installation of the helloworld-service binding.
+Now that you have installed the AGL Application Framework, you will be guided through the installation of the [helloworld-service](https://github.com/iotbzh/helloworld-service) binding.
 
 ## Install git, cmake, gcc, g++ and json-c.
 ### Debian
@@ -36,6 +36,9 @@ cmake ..
 make
 ```
 
+## Run it !
+Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page.
+
 ## Troubleshooting
 ### systemd and/or libmicrohttpd
 If you encounter an error message like this one :
@@ -51,9 +54,9 @@ Call Stack (most recent call first):
   conf.d/cmake/config.cmake:184 (include)
   CMakeLists.txt:3 (include)
 ```
-Open the config.cmake file situated in helloworld-service/conf.d/cmake/
+Open the config.cmake file located in helloworld-service/conf.d/cmake/
 and add a # to the beginning of the "libsystemd>=222" and "libmicrohttpd>=0.9.55".
-The end result should look like this
+The end result should look something like this
 ```CMake
   set (PKG_REQUIRED_LIST
     json-c
@@ -62,4 +65,4 @@ The end result should look like this
     #libmicrohttpd>=0.9.55
   )
 ```
-Once this is done return to the build it section.
+Once this is done return to the "Build it !" section of this page.
