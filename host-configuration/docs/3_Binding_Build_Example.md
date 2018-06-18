@@ -24,7 +24,7 @@ git clone https://github.com/iotbzh/helloworld-service.git --recurse-submodules
 cd helloworld-service
 ```
 
-## Built it !
+## Built it!
 ```bash
 ./conf.d/autobuild/linux/autobuild package
 ```
@@ -36,7 +36,7 @@ cmake ..
 make
 ```
 
-## Run it !
+## Run it!
 Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page.
 
 ## Troubleshooting
@@ -65,4 +65,4 @@ The end result should look something like this
     #libmicrohttpd>=0.9.55
   )
 ```
-Once this is done return to the "Build it !" section of this page.
+Once this is done return to the "Build it!" section of this page.
