@@ -14,7 +14,7 @@ sudo zypper install git cmake gcc gcc-c++ libjson-c-devel
 
 ### Fedora
 ```bash
-sudo dnf install git cmake gcc gcc-c++ libjson-c-devel.x86_64
+sudo dnf install git cmake gcc gcc-c++ json-c-devel.x86_64
 ```
 
 ## Clone the helloworld-service repository
