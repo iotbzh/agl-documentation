@@ -1,28 +1,30 @@
 # AGL Application Framework
 
-The binder provides the way to connect applications to the services that it
+The binder provides a way to connect applications to the services that it
 needs.
 
 It provides a fast way to securely offer APIs to applications written in any
 language and running almost anywhere.
-
-## AGL application framework for debian
-
-```bash
-sudo apt-get install agl-app-framework-binder
-```
-
-## AGL application framework for openSUSE
+## Install the AGL application framework
+### Debian
 
 ```bash
-sudo zypper install agl-app-framework-binder
+sudo apt-get install agl-app-framework-binder-devel
 ```
 
-## AGL application framework for fedora
+### openSUSE
 
 ```bash
-sudo dnf install agl-app-framework-binder
+sudo zypper install agl-app-framework-binder-devel
 ```
+
+### Fedora
+
+```bash
+sudo dnf install agl-app-framework-binder-devel
+```
+
+Then relaunch your terminal.
 
 ## AGL application framework documentation
 

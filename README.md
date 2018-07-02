@@ -17,7 +17,10 @@ To generate documentation:
 ```
 
 or to generate one individual doc manually:
-
+You must install calibre first :
+```bash
+sudo apt install calibre
+```
 ```bash
 gitbook pdf ./sdk-devkit ./build/sdk-devkit.pdf
 ```
