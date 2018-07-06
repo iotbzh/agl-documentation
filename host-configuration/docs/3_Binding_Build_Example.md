@@ -48,7 +48,7 @@ make
 
 ## Run it!
 
-Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page.
+Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page
 
 ## Troubleshooting
 
@@ -56,7 +56,7 @@ Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/ap
 
 If you encounter an error message like this one :
 
-```
+```shell
 -- Checking for module 'libmicrohttpd>=0.9.55'                                                                                       
 --   No package 'libmicrohttpd' found                                                                                                
 CMake Error at /usr/share/cmake/Modules/FindPkgConfig.cmake:415 (message):                                                           
