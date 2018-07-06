@@ -5,7 +5,9 @@ needs.
 
 It provides a fast way to securely offer APIs to applications written in any
 language and running almost anywhere.
+
 ## Install the AGL application framework
+
 ### Debian
 
 ```bash
