@@ -11,7 +11,7 @@ language and running almost anywhere.
 ### Debian
 
 ```bash
-sudo apt-get install agl-app-framework-binder-devel
+sudo apt-get install agl-app-framework-binder-dev
 ```
 
 ### openSUSE
