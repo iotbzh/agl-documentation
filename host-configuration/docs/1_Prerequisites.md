@@ -22,7 +22,7 @@ For more details about OBS, please visit [LinuxAutomotive page on OBS](https://b
 ## Add repo for debian distro
 
 ```bash
-#available distro values are xUbuntu_16.04 xUbuntu_16.10 xUbuntu_17.10 xUbuntu_18.04
+#available distro values are Debian_9.0 xUbuntu_16.04 xUbuntu_16.10 xUbuntu_17.10 xUbuntu_18.04
 export REVISION=Master
 export DISTRO="xUbuntu_18.04"
 wget -O - http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/Release.key | sudo apt-key add -
