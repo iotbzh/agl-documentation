@@ -163,11 +163,7 @@ dnf config-manager --set-enabled isv_LinuxAutomotive_AGL_FunkyFlounder
 
 ```bash
 $ dnf repolist --all | grep AGL
-<<<<<<< HEAD
-isv_LinuxAutomotive_AGL_ElectricEel       isv:LinuxAutomotive:AGL enabled 
-=======
 isv_LinuxAutomotive_AGL_FunkyFlounder       isv:LinuxAutomotive:AGL enabled
->>>>>>> 2c9cca3... Added an example with FF
 isv_LinuxAutomotive_AGL_Master            Automotive Grade Linux  disabled
 ```
 
