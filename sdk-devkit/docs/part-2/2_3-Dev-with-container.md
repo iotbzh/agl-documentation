@@ -51,7 +51,8 @@ install it from the following URL:
 [https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.9.dmg](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.9.dmg)
 (it will end up in the same location).
 
-![](pictures/mac_x11_logo.png)
+![mac x11](pictures/mac_x11_logo.png)
+
 And then after having activated the "X11" icon, any graphical window, such as
 `gvim`'s, should display on your host screen.
 
@@ -64,12 +65,13 @@ for porter**" document, together with a running X server such as Xming
 Before connecting with PuTTY as usual, you have to go
 to `Connection -> SSH -> X11` and check the `Enable X11 forwarding` checkbox.
 
-![](pictures/putty_config.png)
+![putty config](pictures/putty_config.png)
 
 Then, if Xming is installed and running, as displayed
 in the bottom right of the screen:
 
-![](pictures/xming_server.png)
+![xming server](pictures/xming_server.png)
+
 any graphical window, such as `gvim`'s, should display on your screen.
 
 ## Installing new applications (IDE...)

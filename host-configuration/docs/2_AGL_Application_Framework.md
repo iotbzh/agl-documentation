@@ -28,6 +28,14 @@ sudo dnf install agl-app-framework-binder-devel
 
 Then relaunch your terminal.
 
+> *Note*: You need to source a config file to use app-framework-binder just after the installation.
+>
+> ```bash
+> source /etc/profile.d/AGL_app-framework-binder.sh
+> ```
+>
+> This file will be source for every new session.
+
 ## AGL application framework documentation
 
 You can find the AGL application framework documentation

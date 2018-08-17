@@ -13,7 +13,7 @@ found here:
 
 under the **Target hardware: R-Car H2, M2 and E2** section:
 
-![](pictures/renesas_download.jpg)
+![renesas download](pictures/renesas_download.jpg)
 
 Note that you have to register with a free account on MyRenesas and
 accept the license conditions before downloading them. The operation is

@@ -87,25 +87,25 @@ location:
 
 and by clicking on the "*Download (Windows)*" button:
 
-![](pictures/docker_install_windows_1.png)
+![window install windows 1](pictures/docker_install_windows_1.png)\
 We will answer "Yes", "Next" and "Install" in the next dialog boxes.
 
-![](pictures/docker_install_windows_2.png){style width:60%;}
+![window install windows 2](pictures/docker_install_windows_2.png){style width:60%;}
 
-![](pictures/docker_install_windows_3.png){style width:48%; float:left; margin-right:0.3em}
-![](pictures/docker_install_windows_4.png){style width:48%; float:right}
+![window install windows 3](pictures/docker_install_windows_3.png){style width:48%; float:left; margin-right:0.3em}
+![window install windows 4](pictures/docker_install_windows_4.png){style width:48%; float:right}
 
-![](pictures/docker_install_windows_5.png)
+![window install windows 5](pictures/docker_install_windows_5.png)
 
 We can then start it by double-clicking on the "Docker Quickstart
 Terminal" icon:
 
-![](pictures/docker_install_windows_6.png)
+![window install windows 6](pictures/docker_install_windows_6.png)
 
 It will take a certain amount time to setup everything, until this
 banner appears:
 
-![](pictures/docker_install_windows_7.png)
+![window install windows 7](pictures/docker_install_windows_7.png)
 
 Docker Toolbox provides a 1 Gb RAM/20 Go HDD virtual machine; this is
 clearly insufficient for our needs. Let us expand it to 4 Gb RAM/50
@@ -160,24 +160,24 @@ location:
 
 and by clicking on the "*Download (Mac)*" button:
 
-![](pictures/docker_install_macos_1.png)
+![window install macro 1](pictures/docker_install_macos_1.png)
 
 We will answer "Continue" and "Install" in the next dialog boxes:
 
-![](pictures/docker_install_macos_2.png)
+![window install macro 2](pictures/docker_install_macos_2.png)
 
-![](pictures/docker_install_macos_3.png){style width:80%;}
-![](pictures/docker_install_macos_4.png){style width:80%;}
+![window install macro 3](pictures/docker_install_macos_3.png){style width:80%;}
+![window install macro 4](pictures/docker_install_macos_4.png){style width:80%;}
 
 Then, when we go to our "Applications" folder, we now have a "Docker"
 subfolder where we can start "Docker Quickstart Terminal":
 
-![](pictures/docker_install_macos_5.png)
+![window install macro 5](pictures/docker_install_macos_5.png)
 
 It will take a certain amount of time to setup everything, until this
 banner appears:
 
-![](pictures/docker_install_macos_6.png)
+![window install macro 6](pictures/docker_install_macos_6.png)
 
 Docker Toolbox provides a 1 Gb RAM/20 Go HDD virtual machine; this is
 clearly insufficient for our needs. Let us expand it to 4 Gb RAM/50

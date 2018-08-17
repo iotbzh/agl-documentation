@@ -5,9 +5,9 @@ possible to install all of them and switching between them.
 
 The versions are:
 
-* ElectricEel
-* FunkyFlounder
-* Master
+* [ElectricEel](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_ElectricEel)
+* [FunkyFlounder](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_FunkyFlounder)
+* [Master](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_Master)
 
 ```bash
 export REVISION=ElectricEel
@@ -21,8 +21,19 @@ For more details about OBS, please visit [LinuxAutomotive page on OBS](https://b
 
 ## Add repo for debian distro
 
+Avalable distro values are
+
 ```bash
-#available distro values are Debian_9.0 xUbuntu_16.04 xUbuntu_16.10 xUbuntu_17.10 xUbuntu_18.04
+export DISTRO="Debian_9.0"
+export DISTRO="xUbuntu_16.04"
+export DISTRO="xUbuntu_16.10"
+export DISTRO="xUbuntu_17.10"
+export DISTRO="xUbuntu_18.04"
+```
+
+Install the repository:
+
+```bash
 export REVISION=Master
 export DISTRO="xUbuntu_18.04"
 wget -O - http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/Release.key | sudo apt-key add -
@@ -112,7 +123,7 @@ sudo apt-get update
 13 | repo-source                         | openSUSE-Leap-15.0-Source                                                                 | No      | ----      | ----
 14 | repo-source-non-oss                 | openSUSE-Leap-15.0-Source-Non-Oss                                                         | No      | ----      | ----
 15 | repo-update                         | openSUSE-Leap-15.0-Update                                                                 | Yes     | (r ) Yes  | Yes
-16 | repo-update-non-oss                 | openSUSE-Leap-15.0-Update-Non-Oss                                                         | Yes     | (r ) Yes  | Yes  
+16 | repo-update-non-oss                 | openSUSE-Leap-15.0-Update-Non-Oss                                                         | Yes     | (r ) Yes  | Yes
 ```
 
 I want my master repo enabled. Here ElectricEel repo is at the 4th line and Master at 5th line, so we have to enter:

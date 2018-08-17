@@ -230,15 +230,15 @@ this URL:
 [http://sourceforge.net/projects/win32diskimager/](http://sourceforge.net/projects/win32diskimager/)
 
 and by clicking on this button:
-![](pictures/windows_win32diskimager_1.png)
+![windows win32diskimager 1](pictures/windows_win32diskimager_1.png)
 
 We will then install it:
 
-![](pictures/windows_win32diskimager_2.png){style width:48%; float:left; margin-right:0.3em}
-![](pictures/windows_win32diskimager_3.png){style width:48%; float:right}
+![windows win32diskimager 2](pictures/windows_win32diskimager_2.png){style width:48%; float:left; margin-right:0.3em}
+![windows win32diskimager 3](pictures/windows_win32diskimager_3.png){style width:48%; float:right}
 
 And then start it with its icon:
-![](pictures/windows_win32diskimager_4.png)
+![windows win32diskimager 4](pictures/windows_win32diskimager_4.png)
 
 We can then click on the "blue folder" button to select our .img file
 (uncompress the XZ image first using utilities like 7zip for example).
@@ -247,7 +247,7 @@ We can then click on the "blue folder" button to select our .img file
 right matches our SD card reader**, we click on the "**Write**" button
 to start the flashing process.
 
-![](pictures/windows_win32diskimager_5.png)
+![windows win32diskimager 5](pictures/windows_win32diskimager_5.png)
 
 This will take few minutes to copy and sync. You should not remove the
 card from its slot until both commands succeed.

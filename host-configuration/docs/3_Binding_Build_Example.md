@@ -2,7 +2,7 @@
 
 Now that you have installed the AGL Application Framework, you will be guided through the installation of the [helloworld-service](https://github.com/iotbzh/helloworld-service) binding.
 
-## Install git, cmake, gcc, g++ and json-c.
+## Install git, cmake, gcc, g++ and json-c
 
 ### Debian
 
@@ -31,7 +31,7 @@ git clone https://github.com/iotbzh/helloworld-service.git --recurse-submodules
 cd helloworld-service
 ```
 
-## Built it!
+## Built it
 
 ```bash
 ./conf.d/autobuild/linux/autobuild package
@@ -46,7 +46,7 @@ cmake ..
 make
 ```
 
-## Run it!
+## Run it
 
 Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page
 
@@ -57,11 +57,11 @@ Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/ap
 If you encounter an error message like this one :
 
 ```shell
--- Checking for module 'libmicrohttpd>=0.9.55'                                                                                       
---   No package 'libmicrohttpd' found                                                                                                
-CMake Error at /usr/share/cmake/Modules/FindPkgConfig.cmake:415 (message):                                                           
-  A required package was not found                                                                                                   
-Call Stack (most recent call first):                                                                                                 
+-- Checking for module 'libmicrohttpd>=0.9.55'
+--   No package 'libmicrohttpd' found
+CMake Error at /usr/share/cmake/Modules/FindPkgConfig.cmake:415 (message):
+  A required package was not found
+Call Stack (most recent call first):
   /usr/share/cmake/Modules/FindPkgConfig.cmake:593 (_pkg_check_modules_internal)
   conf.d/app-templates/cmake/cmake.d/01-build_options.cmake:92 (PKG_CHECK_MODULES)
   conf.d/app-templates/cmake/common.cmake:77 (include)

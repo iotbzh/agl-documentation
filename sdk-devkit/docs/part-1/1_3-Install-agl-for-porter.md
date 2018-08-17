@@ -136,12 +136,12 @@ permitted by applicable law.
 You will need *PuTTY*, downloaded during the setup
 section. Run it using its icon:
 
-![](pictures/windows_putty_1.png){style width:60px;}
+![windows putty 1](pictures/windows_putty_1.png){style width:60px;}
 
 We can then connect to "**localhost**" on port
 "**2222**".
 
-![](pictures/windows_putty_2.png){style width:60%;}
+![windows putty 2](pictures/windows_putty_2.png){style width:60%;}
 
 Credentials are the same as for Linux: user is "**devel**" with password
 "**devel**".

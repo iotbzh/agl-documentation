@@ -4,9 +4,10 @@ Files used to build an application, or binding, project with the
 AGL Application Framework.
 
 To build your AGL project using these templates, you have to install
-them within your project and adjust compilation option in `config.cmake`.
+them within your project and adjust compilation option in `config.cmake`.\
 For technical reasons, you also have to specify **cmake** target in
-sub CMakeLists.txt installed. Make a globbing search to find source files
+sub CMakeLists.txt installed.\
+Make a globbing search to find source files
 isn't recommended now to handle project build especially in a multiuser
 project because CMake will not be aware of new or removed source files.
 
@@ -48,7 +49,7 @@ For each target part of your project, you need to use ***PROJECT_TARGET_ADD***
 to include this target to your project.
 
 Using it, make available the cmake variable ***TARGET_NAME*** until the next
-***PROJECT_TARGET_ADD*** is invoked with a new target name. 
+***PROJECT_TARGET_ADD*** is invoked with a new target name.
 
 So, typical usage defining a target is:
 
@@ -86,7 +87,7 @@ SET_TARGET_PROPERTIES(${TARGET_NAME}
     OUTPUT_NAME "file_output_name")
 ```
 
-> **TIP** you should use the prefix _afb-_ with your **BINDING* targets which
+> **TIP**: You should use the prefix _afb-_ with your **BINDING* targets which
 > stand for **Application Framework Binding**.
 
 ## More details: Typical project architecture
@@ -160,7 +161,8 @@ A typical project architecture would be :
 ### Update app-templates submodule
 
 You may have some news bug fixes or features available from app-templates
-repository that you want. To update your submodule proceed like the following:
+repository that you want.\
+To update your submodule proceed like the following:
 
 ```bash
 git submodule update --remote
@@ -188,13 +190,14 @@ git commit -s conf.d/app-templates
 #### config.xml.in file
 
 To build a widget you need a _config.xml_ file describing what is your apps and
-how Application Framework would launch it. This repo provide a simple default
-file _config.xml.in_ that should work for simple application without
-interactions with others bindings.
+how Application Framework would launch it.\
+This repo provide a simple default file _config.xml.in_ that should work
+for simple application without interactions with others bindings.
 
 It is recommanded that you use the sample one which is more complete. You can
 find it at the same location under the name _config.xml.in.sample_ (stunning
-isn't it). Just copy the sample file to your _conf.d/wgt_ directory and name it
+isn't it).\
+Just copy the sample file to your _conf.d/wgt_ directory and name it
 _config.xml.in_, then edit it to fit your needs.
 
 > ***CAUTION*** : The default file is only meant to be use for a
@@ -206,8 +209,8 @@ _config.xml.in_, then edit it to fit your needs.
 #### Using cmake template macros
 
 To leverage all cmake templates features, you have to specify ***properties***
-on your targets. Some macros will not works without specifying which is the
-target type.
+on your targets.\
+Some macros will not works without specifying which is the target type.
 
 As the type is not always specified for some custom targets, like an ***HTML5***
 application, macros make the difference using ***LABELS*** property.
@@ -257,8 +260,9 @@ PROJECT_TARGET_ADD(low-can-demo)
 ### project_subdirs_add
 
 This macro will search in all subfolder any `CMakeLists.txt` file. If found then
-it will be added to your project. This could be use in an hybrid application by
-example where the binding lay in a sub directory.
+it will be added to your project.\
+This could be use in an hybrid application by example where the binding
+lay in a sub directory.
 
 Usage :
 
@@ -281,9 +285,10 @@ project_subdirs_add("[0-9]-*")
 ### Including additionnals cmake files
 
 Advanced tuning is possible using addionnals cmake files that are included
-automatically from some specifics locations. They are included in that order:
+automatically from some specifics locations.\
+They are included in that order:
 
-- Project CMake files normaly located in _<project-root-path>/conf.d/app-templates/cmake/cmake.d_
+- Project CMake files normaly located in _\<project-root-path\>/conf.d/app-templates/cmake/cmake.d_
 - Home CMake files located in _$HOME/.config/app-templates/cmake.d_
 - System CMake files located in _/etc/app-templates/cmake.d_
 
@@ -292,8 +297,8 @@ where `XX` are numbers, `***` file name (ie. `99-my_customs.cmake`).
 
 So, saying that you should be aware that every normal cmake variables used at
 project level could be overwrited by home or system located cmake files if
-variables got the same name. Exceptions are cached variables set using
-**CACHE** keyword:
+variables got the same name.\
+Exceptions are cached variables set using **CACHE** keyword:
 
 Example:
 

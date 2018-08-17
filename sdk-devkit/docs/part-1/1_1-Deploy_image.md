@@ -11,7 +11,7 @@ The Yocto build environment is subject to many variations depending on:
 
 In particular, some recent Linux host distributions (Ubuntu 15.x, Debian
 8.x, OpenSUSE 42.x, CentOS 7.x) do not officially support building with
-Yocto 2.0.  
+Yocto 2.0.
 Unfortunately, there's no easy solution to solve this kind of
 problem:
 
@@ -20,7 +20,7 @@ problem:
 
 To circumvent those drawbacks and get more deterministic results amongst
 the AGL community of developers and integrators, using virtualization is
-a good workaround.  
+a good workaround.
 A Docker container is now available for AGL images:
 
 - it is faster, easier and less error-prone to use a prepared Docker
