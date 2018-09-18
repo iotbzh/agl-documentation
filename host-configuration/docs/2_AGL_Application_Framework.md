@@ -31,7 +31,7 @@ Then relaunch your terminal.
 > *Note*: You need to source a config file to use app-framework-binder just after the installation.
 >
 > ```bash
-> source /etc/profile.d/AGL_app-framework-binder.sh
+> source /etc/profile.d/AGL-app-framework-binder.sh
 > ```
 >
 > This file will be source for every new session.
