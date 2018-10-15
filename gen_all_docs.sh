@@ -13,9 +13,9 @@ DRY=
 OUT_DIR=./build
 [ -d $OUT_DIR ] || mkdir -p $OUT_DIR
 
-cat <<EOF | { while read doc_dir output_file; do $DRY $doc_dir/gendocs.sh -o $OUT_DIR/$output_file $DEBUG_FLAG $FORMAT; done }
-./sdk-devkit AGL-Development-Kit.pdf
-./host-configuration AGL-Host-Configuration.pdf
-./candevstudio AGL-CanDevStudio.pdf
+cat <<EOF | { while read doc_dir ; do $DRY iot-gendocs.sh -rp $doc_dir -o $OUT_DIR $DEBUG_FLAG $FORMAT; done }
+./sdk-devkit
+./host-configuration
+./candevstudio
 EOF
 
