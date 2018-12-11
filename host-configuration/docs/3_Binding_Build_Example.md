@@ -1,6 +1,6 @@
 # Binding Build Example
 
-Now that you have installed the AGL Application Framework, you will be guided through the installation of the [helloworld-service](https://github.com/iotbzh/helloworld-service) binding.
+Now that you have installed the AGL Application Framework, you will be guided through the installation of the [agl-service-helloworld](https://gerrit.automotivelinux.org/gerrit/#/admin/projects/apps/agl-service-helloworld) binding.
 
 ## Install git, cmake, gcc, g++ and json-c
 
@@ -22,19 +22,19 @@ sudo zypper install git cmake gcc gcc-c++ libjson-c-devel
 sudo dnf install git cmake gcc gcc-c++ json-c-devel.x86_64
 ```
 
-## Clone the helloworld-service repository
+## Clone the agl-service-helloworld repository
 
-Sources of the [helloworld-service](https://github.com/iotbzh/helloworld-service) binding are available at IoT.BZH's GitHub.
+Sources of the [agl-service-helloworld](https://gerrit.automotivelinux.org/gerrit/#/admin/projects/apps/agl-service-helloworld) binding are available at IoT.BZH's GitHub.
 
 ```bash
-git clone https://github.com/iotbzh/helloworld-service.git --recurse-submodules
-cd helloworld-service
+git clone https://gerrit.automotivelinux.org/gerrit/apps/agl-service-helloworld --recurse-submodules
+cd agl-service-helloworld
 ```
 
 ## Built it
 
 ```bash
-./conf.d/autobuild/linux/autobuild package
+./autobuild/linux/autobuild package
 ```
 
 or manually
@@ -69,7 +69,7 @@ Call Stack (most recent call first):
   CMakeLists.txt:3 (include)
 ```
 
-Open the config.cmake file located in helloworld-service/conf.d/cmake/
+Open the config.cmake file located in agl-service-helloworld/conf.d/cmake/
 and add a # to the beginning of the "libsystemd>=222" and "libmicrohttpd>=0.9.55".
 The end result should look something like this
 

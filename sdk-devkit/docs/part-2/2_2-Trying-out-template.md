@@ -31,22 +31,22 @@ package at once.
 Compile the service:
 
 ```bash
-$ cd ~/helloworld-service/
+$ cd ~/agl-service-helloworld/
 $ ./conf.d/autobuild/agl/autobuild package
 -- The C compiler identification is GNU 6.3.1
 -- The CXX compiler identification is GNU 6.3.1
 [snip]
-[100%] Generating helloworld-service.wgt
-NOTICE: -- PACKING widget helloworld-service.wgt from directory /home/claneys/Workspace/Sources/IOTbzh/helloworld-service/build/package
-++ Install widget file using in the target : afm-util install helloworld-service.wgt
+[100%] Generating agl-service-helloworld.wgt
+NOTICE: -- PACKING widget agl-service-helloworld.wgt from directory /home/claneys/Workspace/Sources/IOTbzh/agl-service-helloworld/build/package
+++ Install widget file using in the target : afm-util install agl-service-helloworld.wgt
 ```
 
-This produced a `helloworld-service.wgt` package. Let us copy it to the
+This produced a `agl-service-helloworld.wgt` package. Let us copy it to the
 target:
 
 ```bash
-$ scp helloworld-service.wgt root@$BOARDIP:~/
-helloworld-service.wgt                           100%   24KB   24.3KB/s   00:00
+$ scp agl-service-helloworld.wgt root@$BOARDIP:~/
+agl-service-helloworld.wgt                           100%   24KB   24.3KB/s   00:00
 ```
 
 ## Installing on the target
@@ -60,8 +60,8 @@ ssh root@$BOARDIP
 and install our packages:
 
 ```bash
-$ afm-util install helloworld-service.wgt
-{ "added": "helloworld-service@1.0" }
+$ afm-util install agl-service-helloworld.wgt
+{ "added": "agl-service-helloworld@1.0" }
 ```
 
 We can verify that they were correctly installed by listing all
@@ -69,7 +69,7 @@ available applications:
 
 ```bash
 $ afm-util list
-[ { "description": "The name says it all!", "name": "helloworld-service", "shortname": "", "id": "helloworld-service@1.0", "version": "1.0", "author": "Stephane Desneux <sdx@iot.bzh>", "author-email": "", "width": "", "height": "" } ]
+[ { "description": "The name says it all!", "name": "agl-service-helloworld", "shortname": "", "id": "agl-service-helloworld@1.0", "version": "1.0", "author": "Stephane Desneux <sdx@iot.bzh>", "author-email": "", "width": "", "height": "" } ]
 ```
 
 ## Running the template
@@ -99,7 +99,7 @@ system and application framework.
 Let us first run the Service:
 
 ```bash
-$ afm-util run helloworld-service@1.0
+$ afm-util run agl-service-helloworld@1.0
 1
 ```
 
@@ -107,10 +107,10 @@ Then confirm it is running:
 
 ```bash
 $ afm-util ps
-[ { "runid": 20091, "pids": [ 20091 ], "state": "running", "id": "helloworld-service@1.0" } ]
+[ { "runid": 20091, "pids": [ 20091 ], "state": "running", "id": "agl-service-helloworld@1.0" } ]
 $ ps -ef | grep afb
 ps -ef|grep afb
-root      5764  3876  0 15:34 ?        00:00:00 /usr/bin/afb-daemon --rootdir=/var/local/lib/afm/applications/helloworld-service/1.0 --workdir=/home/root/app-data/helloworld-service --roothttp=htdocs --binding=/var/local/lib/afm/applications/helloworld-service/1.0/lib/afb-helloworld.so --ws-server=sd:helloworld --no-httpd
+root      5764  3876  0 15:34 ?        00:00:00 /usr/bin/afb-daemon --rootdir=/var/local/lib/afm/applications/agl-service-helloworld/1.0 --workdir=/home/root/app-data/agl-service-helloworld --roothttp=htdocs --binding=/var/local/lib/afm/applications/agl-service-helloworld/1.0/lib/afb-helloworld.so --ws-server=sd:helloworld --no-httpd
 ```
 
 We can see that an afb-daemon (Binder) process for this Service started

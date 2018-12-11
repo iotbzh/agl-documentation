@@ -64,15 +64,15 @@ We provide multiple development templates for the AGL SDK:
 Application Framework _helloworld_ example live in a dedicated Git
 Repository, currently hosted on GitHub at the following address:
 
-[https://github.com/iotbzh/helloworld-service](https://github.com/iotbzh/helloworld-service)
+[agl-service-helloworld](https://gerrit.automotivelinux.org/gerrit/#/admin/projects/apps/agl-service-helloworld)
 
 To get the templates in our development container, let us simply clone
 the source repository:
 
 ```bash
 $ cd ~
-$ git clone --recursive https://github.com/iotbzh/helloworld-service
-Cloning into 'helloworld-service'...
+$ git clone --recursive https://gerrit.automotivelinux.org/gerrit/#/admin/projects/apps/agl-service-helloworld
+Cloning into 'agl-service-helloworld'...
 [...snip...]
 Resolving deltas: 100% (125/125), done.
 Checking connectivity... done.
