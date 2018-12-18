@@ -3,16 +3,10 @@
 There are different repos for AGL packages depending on the version, it is
 possible to install all of them and switching between them.
 
-The versions are:
-
-* [ElectricEel](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_ElectricEel)
-* [FunkyFlounder](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_FunkyFlounder)
-* [Master](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_Master)
+For flounder version you must set REVISION variable as follow :
 
 ```bash
-export REVISION=ElectricEel
 export REVISION=FunkyFlounder
-export REVISION=Master
 ```
 
 You can find all available repos [here](https://build.opensuse.org/project/subprojects/isv:LinuxAutomotive#).
@@ -21,7 +15,7 @@ For more details about OBS, please visit [LinuxAutomotive page on OBS](https://b
 
 ## Add repo for debian distro
 
-Avalable distro values are
+Available distro values are
 
 ```bash
 export DISTRO="Debian_9.0"
@@ -34,7 +28,7 @@ export DISTRO="xUbuntu_18.04"
 Install the repository:
 
 ```bash
-export REVISION=Master
+export REVISION=FunkyFlounder
 export DISTRO="xUbuntu_18.04"
 wget -O - http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/Release.key | sudo apt-key add -
 sudo bash -c "cat >> /etc/apt/sources.list.d/AGL.list <<EOF
@@ -48,7 +42,7 @@ sudo apt-get update
 
 ```bash
 #available distro values are openSUSE_Leap_42.3 openSUSE_Tumbleweed
-export REVISION=Master
+export REVISION=FunkyFlounder
 source /etc/os-release; export DISTRO=$(echo $PRETTY_NAME | sed "s/ /_/g")
 sudo zypper ar http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
 sudo zypper --gpg-auto-import-keys ref
@@ -58,7 +52,7 @@ sudo zypper --gpg-auto-import-keys ref
 
 ```bash
 #available distro values are Fedora_27 Fedora_28 Fedora_Rawhide
-export REVISION=Master
+export REVISION=FunkyFlounder
 source /etc/os-release ; export DISTRO="${NAME}_${VERSION_ID}"
 sudo wget -O /etc/yum.repos.d/isv:LinuxAutomotive:AGL_${REVISION}.repo http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
 ```
