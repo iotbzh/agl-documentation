@@ -3,15 +3,9 @@
 There are different repos for AGL packages depending on the version, it is
 possible to install all of them and switching between them.
 
-The versions are:
-
-* [ElectricEel](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_ElectricEel)
-* [FunkyFlounder](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_FunkyFlounder)
-* [Master](https://build.opensuse.org/project/show/isv:LinuxAutomotive:AGL_Master)
+To install latest (master) version you must set REVISION variable as follow :
 
 ```bash
-export REVISION=ElectricEel
-export REVISION=FunkyFlounder
 export REVISION=Master
 ```
 
