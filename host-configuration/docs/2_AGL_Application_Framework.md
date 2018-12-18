@@ -8,33 +8,33 @@ language and running almost anywhere.
 
 ## Install the AGL application framework
 
-### Debian
+Use the right command line according to your distro
+
+**Debian**
 
 ```bash
 sudo apt-get install agl-app-framework-binder-dev
 ```
 
-### openSUSE
+**openSUSE**
 
 ```bash
 sudo zypper install agl-app-framework-binder-devel
 ```
 
-### Fedora
+**Fedora**
 
 ```bash
 sudo dnf install agl-app-framework-binder-devel
 ```
 
-Then relaunch your terminal.
+To have environment variables set correctly to be able to use app-framework-binder just after the installation, you need to either logout/login or you can just manually source this file :
 
-> *Note*: You need to source a config file to use app-framework-binder just after the installation.
->
-> ```bash
-> source /etc/profile.d/AGL-app-framework-binder.sh
-> ```
->
-> This file will be source for every new session.
+```bash
+source /etc/profile.d/AGL-app-framework-binder.sh
+```
+
+Note that this file will be source automatically for every new session.
 
 ## AGL application framework documentation
 
