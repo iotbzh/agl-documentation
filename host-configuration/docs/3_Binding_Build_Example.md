@@ -48,7 +48,7 @@ make
 
 ## Run it
 
-Refer to the "Running" section of [this](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page
+Refer to the "Running" section of [this](http://docs.automotivelinux.org/flounder/docs/apis_services/en/dev/reference/af-binder/afb-binding-writing.html#sample-binding-tuto-1) page
 
 ## Troubleshooting
 

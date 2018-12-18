@@ -178,4 +178,4 @@ isv_LinuxAutomotive_AGL_FunkyFlounder       isv:LinuxAutomotive:AGL enabled
 isv_LinuxAutomotive_AGL_Master            Automotive Grade Linux  disabled
 ```
 
-Now you have to [install the app-framework-binder](http://docs.automotivelinux.org/docs/devguides/en/dev/reference/host-configuration/docs/2_AGL_Application_Framework.html)
+Now you have to [install the app-framework-binder](http://docs.automotivelinux.org/flounder/docs/devguides/en/dev/reference/host-configuration/docs/2_AGL_Application_Framework.html)

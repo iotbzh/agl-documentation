@@ -28,4 +28,4 @@ sudo dnf install agl-xds-agent agl-xds-cli agl-xds-gdb
 ## AGL XDS Documentation
 
 You can find the XDS documentation
- [here](http://docs.automotivelinux.org/docs/devguides/en/dev/reference/xds/part-1/0_Abstract.html).
+ [here](http://docs.automotivelinux.org/flounder/docs/devguides/en/dev/reference/xds/part-1/0_Abstract.html).
