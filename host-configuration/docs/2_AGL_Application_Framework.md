@@ -39,5 +39,5 @@ Then relaunch your terminal.
 ## AGL application framework documentation
 
 You can find the AGL application framework documentation
- [here](http://docs.automotivelinux.org/docs/apis_services/en/dev/reference/af-main/0-introduction.html
+ [here](http://docs.automotivelinux.org/master/master/docs/apis_services/en/dev/reference/af-main/0-introduction.html
 ).
