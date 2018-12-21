@@ -1,0 +1,22 @@
+type: books
+books:
+-
+    id: host-configuration
+    title: Host Configuration
+    description: Host Configuration documentation
+    keywords:
+    author: "IotBzh"
+    version: master
+    chapters:
+        - url: 0_Abstract.md
+          name: Abstract
+        - url: 1_Prerequisites.md
+          name: Prerequisites
+        - url: 2_AGL_Application_Framework.md
+          name: AGL Application Framework
+        - url: 3_Binding_Build_Example.md
+          name: Binding Build Example
+        - url: 4_AGL_XDS.md
+          name: AGL XDS
+        - url: 5_Candevstudio.md
+          name: CanDevStudio
