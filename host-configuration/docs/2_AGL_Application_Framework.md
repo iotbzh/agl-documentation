@@ -1,43 +1,56 @@
 # AGL Application Framework
 
-The binder provides a way to connect applications to the services that it
-needs.
+The binder provides a way to connect applications to required services.
+It provides a fast way to securely offer APIs to applications that are
+written in any language and that can run almost anywhere.
 
-It provides a fast way to securely offer APIs to applications written in any
-language and running almost anywhere.
+## Install the AGL Application Framework
 
-## Install the AGL application framework
+Depending on your distribution, use the appropriate command to install
+the AGL Application Framework:
 
-Use the right command line according to your distro
+* **Debian**
 
-**Debian**
+  ```bash
+  $ sudo apt-get install agl-app-framework-binder-dev
+  ```
 
-```bash
-sudo apt-get install agl-app-framework-binder-dev
-```
+* **openSUSE**
 
-**openSUSE**
+  ```bash
+  $ sudo zypper install agl-app-framework-binder-devel
+  ```
 
-```bash
-sudo zypper install agl-app-framework-binder-devel
-```
+* **Fedora**
 
-**Fedora**
+  ```bash
+  $ sudo dnf install agl-app-framework-binder-devel
+  ```
 
-```bash
-sudo dnf install agl-app-framework-binder-devel
-```
+Regardless of the distribution, you need to have environment variables set
+correctly in order to use `app-framework-binder` after installing the
+framework.
+Do one of the following after you have installed the framework:
 
-To have environment variables set correctly to be able to use app-framework-binder just after the installation, you need to either logout/login or you can just manually source this file :
+* **Logout and Log Back In:**
 
-```bash
-source /etc/profile.d/AGL-app-framework-binder.sh
-```
+  Logging out and then logging back in correctly sets the environment
+  variables.
 
-Note that this file will be source automatically for every new session.
+* **Manually Source the `AGL-app-framework-binder.sh` File:**
 
-## AGL application framework documentation
+  Source the following command:
 
-You can find the AGL application framework documentation
- [here](http://docs.automotivelinux.org/flounder/docs/apis_services/en/dev/reference/af-main/0-introduction.html
-).
+  ```bash
+  $ source /etc/profile.d/AGL-app-framework-binder.sh
+  ```
+
+  **NOTE:**
+  Creating a new session automatically sources the `AGL-app-framework-binder.sh`
+  file.
+
+## AGL Application Framework Documentation
+
+You can learn more about the AGL Application Framework in the
+"[AGL Framework Overview](../../../../../../apis_services/en/dev/reference/af-main/0-introduction.html)"
+section.
