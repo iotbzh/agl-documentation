@@ -67,7 +67,7 @@ If you encounter an error message similar to the following,
 you need to make some changes to your `cmake` file:
 
 ```shell
--- Checking for module 'libmicrohttpd>=0.9.55'
+-- Checking for module 'libmicrohttpd>=0.9.60'
 --   No package 'libmicrohttpd' found
 CMake Error at /usr/share/cmake/Modules/FindPkgConfig.cmake:415 (message):
   A required package was not found
@@ -81,7 +81,7 @@ Call Stack (most recent call first):
 
 Open the `config.cmake` file located in `helloworld-service/conf.d/cmake/` directory
 and add a hash character (i.e. #) to the beginning of the "libsystemd>=222"
-and "libmicrohttpd>=0.9.55" strings.
+and "libmicrohttpd>=0.9.60" strings.
 Following is an example of the edits:
 
 ```CMake
@@ -89,7 +89,7 @@ Following is an example of the edits:
     json-c
     #libsystemd>=222
     afb-daemon
-    #libmicrohttpd>=0.9.55
+    #libmicrohttpd>=0.9.60
   )
 ```
 
