@@ -39,5 +39,5 @@ Note that this file will be source automatically for every new session.
 ## AGL application framework documentation
 
 You can find the AGL application framework documentation
- [here](http://docs.automotivelinux.org/master/master/docs/apis_services/en/dev/reference/af-main/0-introduction.html
+ [here](http://docs.automotivelinux.org/master/docs/apis_services/en/dev/reference/af-main/0-introduction.html
 ).
