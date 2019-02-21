@@ -1,7 +1,7 @@
 # Usage
 
 You can find the installation part
-[here](http://docs.automotivelinux.org/flounder/docs/devguides/en/dev/reference/host-configuration/docs/4_Candevstudio.html).
+[here](http://docs.automotivelinux.org/flounder/docs/devguides/en/dev/reference/host-configuration/docs/5_Candevstudio.html).
 
 The official repo of CanDevStudio is a subpart of GENIVI and can be found
 [here](https://github.com/GENIVI/CANdevStudio/).
