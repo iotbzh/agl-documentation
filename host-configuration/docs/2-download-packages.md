@@ -38,15 +38,6 @@ section for information on how to set this variable.
 
 ## Install the Repository
 
-**WRITER NOTES:** Code seemed to work.
-I don't know for sure though.
-Have email out to the group asking for a look at the output.
-See the Pastebin https://pastebin.com/KTt3563B.
-It looks to me like if you run this more than once, you are concatanating the
-two lines into that `/etc/apt/sources.list.d/AGL.list` file again and again.
-Not sure if that is what you want.
-If you run it once you get the following output:
-
 ```
 Hit:1 https://deb.nodesource.com/node_10.x xenial InRelease
 Hit:2 https://download.docker.com/linux/ubuntu xenial InRelease
@@ -135,10 +126,6 @@ dnf repolist --all | grep AGL
 ```
 
 ## Switching Between Repositories
-
-**WRITER NOTES:** I don't understand the following information.
-Looks like there is missing output.
-Plus, there is no real explanation of the output and what it means.
 
 The commands in the previous section showed you how to install the packages
 from a specific repository and how to verify whether or not the packages

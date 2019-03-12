@@ -13,11 +13,6 @@ Following is a specific list of supported distributions:
 Exporting the `DISTRO` environment variable defines the distribution.
 Following are examples:
 
-**WRITER NOTE:** Email is out to the group asking about these string values.
-How does a developer know what value to use?
-What are the values for supported OpenSUSE and Fedora distributions?
-
-
 ```bash
 export DISTRO="Debian_9.0"
 export DISTRO="xUbuntu_16.04"
