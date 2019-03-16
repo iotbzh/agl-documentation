@@ -2,21 +2,21 @@ type: books
 books:
 -
     id: host-configuration
-    title: Host Configuration
+    title: Building Microservices Natively
     description: Host Configuration documentation
     keywords:
     author: "IotBzh"
-    version: master
+    version: sandbox/scottrif29/scottdocs
     chapters:
-        - url: 0_Abstract.md
-          name: Abstract
-        - url: 1_Prerequisites.md
-          name: Prerequisites
-        - url: 2_AGL_Application_Framework.md
-          name: AGL Application Framework
-        - url: 3_Binding_Build_Example.md
-          name: Binding Build Example
-        - url: 4_AGL_XDS.md
-          name: AGL XDS
-        - url: 5_Candevstudio.md
-          name: CanDevStudio
+        - url: 0-build-microservice-overview.md
+          name: Overview
+        - url: 1-verify-build-host.md
+          name: 1. Verify Your Build Host
+        - url: 2-download-packages.md
+          name: 2. Download Packages
+        - url: 3-installing-binder-daemon.md
+          name: 3. Installing the Binder Daemon
+        - url: 4-getting-source-files.md
+          name: 4. Getting Your Source Files
+        - url: 5-building-and-running-service-natively.md
+          name: 5. Building and Running Your Service Natively
