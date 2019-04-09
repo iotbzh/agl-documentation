@@ -1,31 +1,90 @@
-# Prerequisites for package installation
+# 2. Download Packages
 
-There are different repos for AGL packages depending on the version, it is
-possible to install all of them and switching between them.
+Different repositories exist for different AGL releases.
+You need to download and install the packages based on your version
+of AGL.
 
-For flounder version you must set REVISION variable as follow :
+## Set the `REVISION` Environment Variable
+
+All the packages reside in repositories managed by the
+[OpenSUSE Build Service (OBS)](https://build.opensuse.org/).
+You can see the packages
+[here](https://build.opensuse.org/project/subprojects/isv:LinuxAutomotive#).
+
+Currently, support exists for the following AGL releases:
+
+* ElectricEel
+* FunkyFlounder
+* GrumpyGuppy
+* Master
+
+You need to set the `REVISION` environment variable to the AGL release you
+are using.
+For this example, set and export `REVISION` as "Funky Flounder".
 
 ```bash
-export REVISION=FunkyFlounder
+$ export REVISION=FunkyFlounder
+```
+For additional details about OBS, see
+[LinuxAutomotive page on OBS](https://build.opensuse.org/project/show/isv:LinuxAutomotive).
+
+## Make Sure Your `DISTRO` Environment Variable is Set
+
+The `DISTRO` environment variable needs to be correctly set for your
+Linux distribution.
+See the
+"[Verify Your Build Host](./1-verify-build-host.html)"
+section for information on how to set this variable.
+
+## Install the Repository
+
+**WRITER NOTES:** Code seemed to work.
+I don't know for sure though.
+Have email out to the group asking for a look at the output.
+See the Pastebin https://pastebin.com/KTt3563B.
+It looks to me like if you run this more than once, you are concatanating the
+two lines into that `/etc/apt/sources.list.d/AGL.list` file again and again.
+Not sure if that is what you want.
+If you run it once you get the following output:
+
+```
+Hit:1 https://deb.nodesource.com/node_10.x xenial InRelease
+Hit:2 https://download.docker.com/linux/ubuntu xenial InRelease
+Hit:3 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu xenial InRelease
+Ign:5 http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_FunkyFlounder/xUbuntu_16.04 ./ InRelease
+Hit:6 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Hit:7 http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_FunkyFlounder/xUbuntu_16.04 ./ Release
+Hit:8 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease
+Reading package lists... Done
 ```
 
-You can find all available repos [here](https://build.opensuse.org/project/subprojects/isv:LinuxAutomotive#).
+Not sure why you get the `Ign` on line 5.
+I guess InRelease does not exist.
 
-For more details about OBS, please visit [LinuxAutomotive page on OBS](https://build.opensuse.org/project/show/isv:LinuxAutomotive).
+If you don't have a `/etc/apt/sources.list.d/AGL.list` file to even start with,
+and you run through the whole thing, you get the following output:
 
-## Add repo for debian distro
-
-Available distro values are
-
-```bash
-export DISTRO="Debian_9.0"
-export DISTRO="xUbuntu_16.04"
-export DISTRO="xUbuntu_16.10"
-export DISTRO="xUbuntu_17.10"
-export DISTRO="xUbuntu_18.04"
+```
+$ sudo apt-get update
+Hit:1 https://deb.nodesource.com/node_10.x xenial InRelease
+Hit:2 https://download.docker.com/linux/ubuntu xenial InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu xenial InRelease
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:5 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]
+Ign:6 http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_FunkyFlounder/xUbuntu_16.04 ./ InRelease
+Hit:7 http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_FunkyFlounder/xUbuntu_16.04 ./ Release
+Get:9 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [902 kB]
+Fetched 1,225 kB in 1s (803 kB/s)
+Reading package lists... Done
 ```
 
-Install the repository:
+
+Following are example commands that show how to install the package repository
+based on various values of `DISTRO` and `REVISION`:
+
+### Ubuntu and "FunkyFlounder"
 
 ```bash
 export REVISION=FunkyFlounder
@@ -38,57 +97,61 @@ EOF"
 sudo apt-get update
 ```
 
-## Add repo for openSuse distro
+You can see the installed repository using the following command:
 
 ```bash
-#available distro values are openSUSE_Leap_42.3 openSUSE_Tumbleweed
+cat /etc/apt/sources.list.d/AGL.list
+```
+
+### OpenSUSE and "FunkyFlounder"
+
+```bash
+export DISTRO="OpenSUSE_lEAP_42.3"
 export REVISION=FunkyFlounder
 source /etc/os-release; export DISTRO=$(echo $PRETTY_NAME | sed "s/ /_/g")
 sudo zypper ar http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
 sudo zypper --gpg-auto-import-keys ref
 ```
 
-## Add repo for fedora distro
-
-```bash
-#available distro values are Fedora_27 Fedora_28 Fedora_Rawhide
-export REVISION=FunkyFlounder
-source /etc/os-release ; export DISTRO="${NAME}_${VERSION_ID}"
-sudo wget -O /etc/yum.repos.d/isv:LinuxAutomotive:AGL_${REVISION}.repo http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
-```
-
-## Switch between repos
-
-First, let's check our installed AGL repos.
-
-### Debian distro
-
-```bash
-cat /etc/apt/sources.list.d/AGL.list
-```
-
-### openSuse distro
+You can see the installed repository using the following command:
 
 ```bash
 zypper repos | grep AGL
 ```
 
-### Fedora distro
+### Fedora and "FunkyFlounder"
+
+```bash
+export DISTRO="Fedora_28"
+export REVISION=FunkyFlounder
+source /etc/os-release ; export DISTRO="${NAME}_${VERSION_ID}"
+sudo wget -O /etc/yum.repos.d/isv:LinuxAutomotive:AGL_${REVISION}.repo http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
+```
+
+You can see the installed repository using the following command:
 
 ```bash
 dnf repolist --all | grep AGL
 ```
 
-Make sure that you have what you need installed.
-With the commands above you should see which repos are enabled/disabled.
-To switch between two repos you just have to disable your current AGL repo and
-enable the wanted repo.
-It's a little bit different for Debian distros, see the example right down
-below.
+## Switching Between Repositories
+
+**WRITER NOTES:** I don't understand the following information.
+Looks like there is missing output.
+Plus, there is no real explanation of the output and what it means.
+
+The commands in the previous section showed you how to install the packages
+from a specific repository and how to verify whether or not the packages
+are enabled or disabled.
+You can switch between different repositories.
+You must disable your current AGL repository and then enable the repository
+designated for the switch.
+
+Following is an example for Debian distributions:
 
 ### Example for Debian distro
 
-I'm on Master and I want an ElectricEel revision.
+Suppose you are on "master" and you want the "ElectricEel" AGL revision.
 
 ```bash
 export OLDR=Master
@@ -120,7 +183,10 @@ sudo apt-get update
 16 | repo-update-non-oss                 | openSUSE-Leap-15.0-Update-Non-Oss                                                         | Yes     | (r ) Yes  | Yes
 ```
 
-I want my master repo enabled. Here ElectricEel repo is at the 4th line and Master at 5th line, so we have to enter:
+Now, you want your "master" repository enabled.
+In the above output, the "ElectricEel" repository is at the fourth line
+and the "master" repository is at the fifth line.
+Thus, enter the following:
 
 ```bash
 $ sudo zypper mr -d 4 && sudo zypper mr -e 5
@@ -129,7 +195,11 @@ Repository 'isv_LinuxAutomotive_AGL_Master' has been successfully enabled.
 sudo zypper refresh
 ```
 
-In this command "-d" stands for disable and "-e" enable
+**NOTE:** In the previous command, the "-d" option is used for "disable" and the
+"-e" option is used for "enable".
+
+Following are the results:
+
 
 ```bash
 #  | Alias                               | Name                                                                                      | Enabled | GPG Check | Refresh
@@ -159,7 +229,7 @@ isv_LinuxAutomotive_AGL_FunkyFlounder       isv:LinuxAutomotive:AGL disabled
 isv_LinuxAutomotive_AGL_Master            Automotive Grade Linux  enabled
 ```
 
-I want my ElectricEel repo enabled.
+The following commands enable the "ElectricEel" repository:
 
 ```bash
 dnf config-manager --set-disabled isv_LinuxAutomotive_AGL_Master
@@ -171,5 +241,3 @@ $ dnf repolist --all | grep AGL
 isv_LinuxAutomotive_AGL_FunkyFlounder       isv:LinuxAutomotive:AGL enabled
 isv_LinuxAutomotive_AGL_Master            Automotive Grade Linux  disabled
 ```
-
-Now you have to [install the app-framework-binder](http://docs.automotivelinux.org/flounder/docs/devguides/en/dev/reference/host-configuration/docs/2_AGL_Application_Framework.html)
