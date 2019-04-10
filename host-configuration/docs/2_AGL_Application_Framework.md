@@ -31,7 +31,7 @@ sudo dnf install agl-app-framework-binder-devel
 To have environment variables set correctly to be able to use app-framework-binder just after the installation, you need to either logout/login or you can just manually source this file :
 
 ```bash
-source /etc/profile.d/AGL-app-framework-binder.sh
+source /etc/profile.d/agl-app-framework-binder.sh
 ```
 
 Note that this file will be source automatically for every new session.
