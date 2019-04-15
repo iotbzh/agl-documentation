@@ -7,10 +7,10 @@ It provides a fast way to securely offer APIs to applications that are
 written in any language and that can run almost anywhere.
 
 You can learn more about the AGL Application Framework in the
-"[AGL Framework Overview](../../../../../../apis_services/en/dev/reference/af-main/0-introduction.html)"
+"[AGL Framework Overview](../../apis_services/reference/af-main/0-introduction.html)"
 section.
 You can learn more about the `aft-daemon` in the
-"[Binder Overview](../../../../../../apis_services/en/dev/reference/af-binder/afb-overview.html)"
+"[Binder Overview](../../apis_services/reference/af-binder/afb-overview.html)"
 section.
 
 ## Installing on Debian

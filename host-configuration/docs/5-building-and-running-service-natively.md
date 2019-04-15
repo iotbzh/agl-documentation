@@ -43,20 +43,20 @@ The daemon is now listening on port 3333 of the `localhost`.
 
 ## Using Optional Tools
 
-Once you have built and run your micro-service successfully using your 
-native Linux system, you should consider using some additional 
-development tools: X(Cross) Development System (XDS) and 
+Once you have built and run your micro-service successfully using your
+native Linux system, you should consider using some additional
+development tools: X(Cross) Development System (XDS) and
 the Controller Area Network (CAN) Development Studio (CANdevStudio).
 
 * **XDS:** Cross-compiles and ports your AGL image to your target hardware.
-For information on XDS, see the 
-"[XDS User's Guide](../../xds/part-1/0_Abstract.html)" 
+For information on XDS, see the
+"[XDS User's Guide](../reference/xds/part-1/0_Abstract.html)"
 section.
 
 * **CANdevStudio:** Simulates CAN signals such as ignition status,
 doors status, or reverse gear by every automotive developer.
 For information on CANdevStudio, see the
-"[CANdevStudio Quickstart](../../../../../../apis_services/en/dev/reference/candevstudio/docs/1_Usage.html)"
+"[CANdevStudio Quickstart](../../apis_services/reference/candevstudio/1_Usage.html)"
 section.
 
 ## Troubleshooting

@@ -9,7 +9,7 @@ You can install these
 [packages](https://build.opensuse.org/project/subprojects/isv:LinuxAutomotive)
 and bypass the
 [Yocto Project](https://yoctoproject.org) build cycles described in the
-"[Developing an AGL Image](../../../../../../getting_started/en/dev/reference/image-workflow-intro.html)" section.
+"[Developing an AGL Image](../../getting_started/reference/getting-started/image-workflow-intro.html)" section.
 
 Using this workflow, you can start to code, execute, and debug Microservice
 bindings directly on your host.  This flow works for many cases for which
@@ -38,7 +38,7 @@ remaining sections.
 
 3. **Install the Binder Daemon:**
    Install the Binder Daemon, which is a part of the
-   [AGL Application Framework (AFM)](../../../../../../apis_services/en/dev/reference/af-main/0-introduction.html).
+   [AGL Application Framework (AFM)](../../apis_services/reference/af-main/0-introduction.html).
    The daemon allows you to connect applications to required services.
 
 4. **Get Your Source Files:**
@@ -50,6 +50,6 @@ remaining sections.
    Build your binding on your Linux host using native tools.
    Once the binding is built, you can run it to make sure it functions
    as expected.
-   
+
    Optionally use extra tools once your binding is building and running
    smoothly in the native environment.
