@@ -41,6 +41,12 @@ The previous command starts `afb-daemon` and loads the `helloworld.so`
 binding.
 The daemon is now listening on port 3333 of the `localhost`.
 
+## Testing the Service
+
+Refer to the [AGL Test Framework](../../apis_services/#agl-test-framework) section of the "APIs & Services" documentation you can test your `helloworld-service` binding with the `afm-test` tool.
+
+Have a look to the generic example of how to launch the tests suite [here](../../apis_services/reference/afb-test/3_Launch_the_tests.html) and know how to test your helloworld binding instance.
+
 ## Using Optional Tools
 
 Once you have built and run your micro-service successfully using your
