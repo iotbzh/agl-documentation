@@ -56,7 +56,7 @@ the Controller Area Network (CAN) Development Studio (CANdevStudio).
 
 * **XDS:** Cross-compiles and ports your AGL image to your target hardware.
 For information on XDS, see the
-"[XDS User's Guide](../reference/xds/part-1/0_Abstract.html)"
+"[X(cross) Development System: User's Guide](../reference/xds/part-1/xds-overview.html)"
 section.
 
 * **CANdevStudio:** Simulates CAN signals such as ignition status,
