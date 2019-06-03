@@ -6,7 +6,7 @@ books:
     description: Host Configuration documentation
     keywords:
     author: "IotBzh"
-    version: sandbox/scottrif29/scottdocs
+    version: guppy
     chapters:
         - url: 0-build-microservice-overview.md
           name: Overview

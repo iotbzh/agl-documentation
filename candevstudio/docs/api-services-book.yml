@@ -6,7 +6,7 @@ books:
     description: CanDevStudio Quickstart documentation
     keywords:
     author: "IotBzh"
-    version: master
+    version: guppy
     chapters:
     - url: 1_Usage.md
       name: Usage Guide
