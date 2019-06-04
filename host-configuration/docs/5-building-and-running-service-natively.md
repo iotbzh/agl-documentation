@@ -41,6 +41,18 @@ The previous command starts `afb-daemon` and loads the `helloworld.so`
 binding.
 The daemon is now listening on port 3333 of the `localhost`.
 
+## Testing the Service
+
+Refer to the
+[AGL Test Framework](../../apis_services/#agl-test-framework) topic in the
+"APIs & Services" topic.
+You can test your `helloworld-service` binding using the `afm-test` tool.
+
+Examine the generic example describing how to launch the tests suite
+[here](../../apis_services/reference/afb-test/3_Launch_the_tests.html).
+This example can help you understand how to test your helloworld binding
+instance.
+
 ## Using Optional Tools
 
 Once you have built and run your micro-service successfully using your
@@ -50,7 +62,7 @@ the Controller Area Network (CAN) Development Studio (CANdevStudio).
 
 * **XDS:** Cross-compiles and ports your AGL image to your target hardware.
 For information on XDS, see the
-"[XDS User's Guide](../reference/xds/part-1/0_Abstract.html)"
+"[X(cross) Development System: User's Guide](../reference/xds/part-1/xds-overview.html)"
 section.
 
 * **CANdevStudio:** Simulates CAN signals such as ignition status,
