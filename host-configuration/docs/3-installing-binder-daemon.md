@@ -1,4 +1,4 @@
-# 3. Installing the Binder Daemon
+# Installing the Binder Daemon
 
 The Application Framework Binder Daemon (`afb-daemon`), which is a part of
 the AGL Application Framework, provides a way to connect applications to
