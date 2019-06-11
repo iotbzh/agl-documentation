@@ -1,4 +1,4 @@
-# 5. Building and Running Your Service Natively
+# Building and Running Your Service Natively
 
 The next step in the binder development process is to build your
 binder and run it using your native Linux system.

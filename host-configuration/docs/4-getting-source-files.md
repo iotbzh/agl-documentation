@@ -1,4 +1,4 @@
-# 4. Getting Your Source Files
+# Getting Your Source Files
 
 Now that you have your host ready, packages installed, and the binder
 daemon ready, you can get your source files together.
