@@ -1,4 +1,4 @@
-# 2. Download Packages
+# Download Packages
 
 Different repositories exist for different AGL releases.
 You need to download and install the packages based on your version

@@ -1,4 +1,4 @@
-# 1. Verify Your Build Host
+# Verify Your Build Host
 
 In order to build a Microservice binding natively, you need to be using a
 supported Linux distribution.
