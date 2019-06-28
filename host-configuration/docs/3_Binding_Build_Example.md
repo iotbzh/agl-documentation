@@ -27,8 +27,8 @@ sudo dnf install git cmake gcc gcc-c++ json-c-devel.x86_64
 Sources of the [helloworld-service](https://github.com/iotbzh/helloworld-service) binding are available at IoT.BZH's GitHub.
 
 ```bash
-git clone https://github.com/iotbzh/helloworld-service.git --recurse-submodules
-cd helloworld-service
+git clone "https://gerrit.automotivelinux.org/gerrit/apps/agl-service-helloworld"
+cd agl-service-helloworld
 ```
 
 ## Built it
