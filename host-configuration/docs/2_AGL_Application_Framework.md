@@ -10,19 +10,19 @@ language and running almost anywhere.
 
 Use the right command line according to your distro
 
-**Debian**
+### **Debian**
 
 ```bash
 sudo apt-get install agl-app-framework-binder-dev
 ```
 
-**openSUSE**
+### **openSUSE**
 
 ```bash
 sudo zypper install agl-app-framework-binder-devel
 ```
 
-**Fedora**
+### **Fedora**
 
 ```bash
 sudo dnf install agl-app-framework-binder-devel

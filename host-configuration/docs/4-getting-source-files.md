@@ -10,7 +10,7 @@ depends on the `libjson-c` library, and uses `cmake` for building.
 
 For this example, you need to have the following installed on your host:
 
-```
+```bash
 git
 cmake
 gcc

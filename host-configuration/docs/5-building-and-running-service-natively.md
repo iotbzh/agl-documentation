@@ -14,16 +14,16 @@ Move to the cloned `helloworld-service` repository and build the service
 using either of the following methods:
 
 * ```bash
-  $ cd helloworld-service
-  $ ./conf.d/autobuild/linux/autobuild package
+  cd helloworld-service
+  ./conf.d/autobuild/linux/autobuild package
   ```
 
 * ```bash
-  $ cd helloworld-service
-  $ mkdir build
-  $ cd build
-  $ cmake ..
-  $ make
+  cd helloworld-service
+  mkdir build
+  cd build
+  cmake ..
+  make
   ```
 
 ## Running the Service
@@ -34,7 +34,7 @@ In this example, you are binding an instance of `helloworld-service`
 to the rest of the system:
 
 ```bash
-$ afb-daemon --binding helloworld.so --port 3333 --token ''
+afb-daemon --binding helloworld.so --port 3333 --token ''
 ```
 
 The previous command starts `afb-daemon` and loads the `helloworld.so`

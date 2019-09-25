@@ -1,13 +1,13 @@
 # Download Packages
 
-Different repositories exist for different AGL releases.
+Different repositories exist for different AGL releases.\
 You need to download and install the packages based on your version
 of AGL.
 
 ## Set the `REVISION` Environment Variable
 
 All the packages reside in repositories managed by the
-[OpenSUSE Build Service (OBS)](https://build.opensuse.org/).
+[OpenSUSE Build Service (OBS)](https://build.opensuse.org/).\
 You can see the packages
 [here](https://build.opensuse.org/project/subprojects/isv:LinuxAutomotive#).
 
@@ -19,26 +19,27 @@ Currently, support exists for the following AGL releases:
 * Master
 
 You need to set the `REVISION` environment variable to the AGL release you
-are using.
-For this example, set and export `REVISION` as "Funky Flounder".
+are using.\
+For this example, set and export `REVISION` as "Master".
 
 ```bash
-$ export REVISION=FunkyFlounder
+export REVISION=Master
 ```
+
 For additional details about OBS, see
 [LinuxAutomotive page on OBS](https://build.opensuse.org/project/show/isv:LinuxAutomotive).
 
 ## Make Sure Your `DISTRO` Environment Variable is Set
 
 The `DISTRO` environment variable needs to be correctly set for your
-Linux distribution.
+Linux distribution.\
 See the
 "[Verify Your Build Host](./1-verify-build-host.html)"
 section for information on how to set this variable.
 
 ## Install the Repository
 
-```
+```bash
 Hit:1 https://deb.nodesource.com/node_10.x xenial InRelease
 Hit:2 https://download.docker.com/linux/ubuntu xenial InRelease
 Hit:3 http://security.ubuntu.com/ubuntu xenial-security InRelease
@@ -50,13 +51,13 @@ Hit:8 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease
 Reading package lists... Done
 ```
 
-Not sure why you get the `Ign` on line 5.
+Not sure why you get the `Ign` on line 5.\
 I guess InRelease does not exist.
 
 If you don't have a `/etc/apt/sources.list.d/AGL.list` file to even start with,
 and you run through the whole thing, you get the following output:
 
-```
+```bash
 $ sudo apt-get update
 Hit:1 https://deb.nodesource.com/node_10.x xenial InRelease
 Hit:2 https://download.docker.com/linux/ubuntu xenial InRelease
@@ -71,14 +72,13 @@ Fetched 1,225 kB in 1s (803 kB/s)
 Reading package lists... Done
 ```
 
-
 Following are example commands that show how to install the package repository
 based on various values of `DISTRO` and `REVISION`:
 
-### Ubuntu and "FunkyFlounder"
+### Ubuntu and "Master"
 
 ```bash
-export REVISION=FunkyFlounder
+export REVISION=Master
 export DISTRO="xUbuntu_18.04"
 wget -O - http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/Release.key | sudo apt-key add -
 sudo bash -c "cat >> /etc/apt/sources.list.d/AGL.list <<EOF
@@ -94,11 +94,11 @@ You can see the installed repository using the following command:
 cat /etc/apt/sources.list.d/AGL.list
 ```
 
-### OpenSUSE and "FunkyFlounder"
+### OpenSUSE and "Master"
 
 ```bash
-export DISTRO="OpenSUSE_lEAP_42.3"
-export REVISION=FunkyFlounder
+export DISTRO="openSUSE_Leap_15.0"
+export REVISION=Master
 source /etc/os-release; export DISTRO=$(echo $PRETTY_NAME | sed "s/ /_/g")
 sudo zypper ar http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
 sudo zypper --gpg-auto-import-keys ref
@@ -110,11 +110,11 @@ You can see the installed repository using the following command:
 zypper repos | grep AGL
 ```
 
-### Fedora and "FunkyFlounder"
+### Fedora and "Master"
 
 ```bash
 export DISTRO="Fedora_28"
-export REVISION=FunkyFlounder
+export REVISION=Master
 source /etc/os-release ; export DISTRO="${NAME}_${VERSION_ID}"
 sudo wget -O /etc/yum.repos.d/isv:LinuxAutomotive:AGL_${REVISION}.repo http://download.opensuse.org/repositories/isv:/LinuxAutomotive:/AGL_${REVISION}/${DISTRO}/isv:LinuxAutomotive:AGL_${REVISION}.repo
 ```
@@ -186,7 +186,6 @@ sudo zypper refresh
 "-e" option is used for "enable".
 
 Following are the results:
-
 
 ```bash
 #  | Alias                               | Name                                                                                      | Enabled | GPG Check | Refresh
