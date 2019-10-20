@@ -13,6 +13,7 @@ For this example, you need to have the following installed on your host:
 ```bash
 git
 cmake
+pkg-config
 gcc
 g++
 json-c
@@ -28,7 +29,7 @@ Use the following commands if your native Linux machine uses the Debian
 distribution:
 
 ```bash
-sudo apt-get install git cmake gcc g++ libjson-c-dev
+sudo apt-get install git cmake pkg-config gcc g++ libjson-c-dev
 ```
 
 ### Installing on OpenSUSE
@@ -37,7 +38,7 @@ Use the following commands if your native Linux machine uses the OpenSUSE
 distribution:
 
 ```bash
-sudo zypper install git cmake gcc gcc-c++ libjson-c-devel
+sudo zypper install git cmake pkg-config gcc gcc-c++ libjson-c-devel
 ```
 
 ### Installing on Fedora
@@ -46,7 +47,7 @@ Use the following commands if your native Linux machine uses the Fedora
 distribution:
 
 ```bash
-sudo dnf install git cmake gcc gcc-c++ json-c-devel.x86_64
+sudo dnf install git cmake pkg-config gcc gcc-c++ json-c-devel.x86_64
 ```
 
 ## Cloning the helloworld-service repository
