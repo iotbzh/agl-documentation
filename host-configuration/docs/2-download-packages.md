@@ -16,6 +16,7 @@ Currently, support exists for the following AGL releases:
 * ElectricEel
 * FunkyFlounder
 * GrumpyGuppy
+* HappyHalibut
 * Master
 
 You need to set the `REVISION` environment variable to the AGL release you
