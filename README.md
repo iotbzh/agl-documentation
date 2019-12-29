@@ -26,7 +26,7 @@ sudo apt install calibre
 ```
 
 ```bash
-gitbook pdf ./sdk-devkit ./build/sdk-devkit.pdf
+gitbook pdf ./host-configuration/docs ./build/docs.pdf
 ```
 
 ## Notes / TODO
